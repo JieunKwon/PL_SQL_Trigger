@@ -50,10 +50,10 @@ Create Trigger
     END; 
     
 
-[REFERENCING OLD AS o NEW AS n]
+[REFERENCING OLD / NEW ]
 
  new - refer value for INSERT and UPDATE
- 
+   
  old - old values for UPDATE and DELETE
 
 
@@ -73,3 +73,13 @@ Example
        dbms_output.put_line('Salary difference: ' || sal_diff); 
     END; 
     / 
+
+-> The above trigger will fire before any DELETE or INSERT or UPDATE operation on the table. 
+
+-> if trigger fired, it will display the following result 
+
+Old salary: 1500 
+
+New salary: 2000 
+
+Salary difference: 500 
