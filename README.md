@@ -15,19 +15,19 @@ A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN)
 Benefits of Triggers
 ----
 
-Generating some derived column values automatically
+ - Generating some derived column values automatically
 
-Enforcing referential integrity
+ - Enforcing referential integrity
 
-Event logging and storing information on table access
+ - Event logging and storing information on table access
 
-Auditing
+ - Auditing
 
-Synchronous replication of tables
+ - Synchronous replication of tables
 
-Imposing security authorizations
+ - Imposing security authorizations
 
-Preventing invalid transactions
+ - Preventing invalid transactions
 
 
 Create Trigger
