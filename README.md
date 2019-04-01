@@ -49,4 +49,27 @@ Create Trigger
        Exception-handling-statements 
     END; 
     
-  
+
+[REFERENCING OLD AS o NEW AS n]
+
+ new - refer value for INSERT and UPDATE
+ 
+ old - old values for UPDATE and DELETE
+
+
+Example
+-----
+
+    CREATE OR REPLACE TRIGGER display_salary_changes 
+    BEFORE DELETE OR INSERT OR UPDATE ON customers 
+    FOR EACH ROW 
+    WHEN (NEW.ID > 0) 
+    DECLARE 
+       sal_diff number; 
+    BEGIN 
+       sal_diff := :NEW.salary  - :OLD.salary; 
+       dbms_output.put_line('Old salary: ' || :OLD.salary); 
+       dbms_output.put_line('New salary: ' || :NEW.salary); 
+       dbms_output.put_line('Salary difference: ' || sal_diff); 
+    END; 
+    / 
