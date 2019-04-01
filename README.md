@@ -56,6 +56,7 @@ Create Trigger
    
  old - old values for UPDATE and DELETE
 
+[CAN NOT create more than one trigger for the same event on the same table]
 
 Example
 -----
@@ -84,3 +85,5 @@ New salary: 2000
 
 Salary difference: 500 
 
+
+ 
