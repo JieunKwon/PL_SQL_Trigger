@@ -83,3 +83,4 @@ Old salary: 1500
 New salary: 2000 
 
 Salary difference: 500 
+
